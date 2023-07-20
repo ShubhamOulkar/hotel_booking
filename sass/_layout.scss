@@ -5,6 +5,15 @@
     background-color: var(--color-Grey-light-2);
     box-shadow: var(--shadow-dark) ;
     min-height: 50rem;
+
+
+    @media only screen and (max-width:$bp-largest){
+        margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        margin: 0;
+    }
 }
 
 // header contains sub flex containers see in _components.scss
@@ -17,11 +26,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width:$bp-smallest){
+        flex-wrap: wrap;
+        height: 12rem;
+        align-content: space-around;
+    }
 }
 
 // content contains two flex containers sidebar and hotel information
 .content{
     display: flex;
+
+    @media  only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 // sidebar contains sub sub flex containers, see in _components.scss
@@ -47,6 +66,15 @@
     padding: 4.5rem;
     background-color: var(--color-Grey-light-1);
     border-bottom: var(--border-bittom) ;
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 3rem;
+     }
+
+     @media only screen and (max-width: $bp-small){
+        flex-direction: column;
+        max-width: 100%;
+     }
 }
 
 // hotel discription 
@@ -56,6 +84,16 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 2rem;
+        margin-right: 3rem;  
+     }
+
+     @media only screen and (max-width: $bp-small){
+        margin-right: 0rem;
+        margin-bottom: 3rem;
+     }
 }
 
 .user-reviews{
